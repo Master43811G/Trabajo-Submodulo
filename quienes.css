@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #464652;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+}
+
+/* Título */
+header {
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    position: relative;
+    z-index: 10; /* Asegura que el header esté por encima de otros elementos */
+}
+
+.container-header {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
+.logo-title img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+.logo-title h4 {
+    color: #ffffff;
+    font-weight: 100;
+    margin: 10px;
+}
+
+.icon-menu {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    color: #fff;
+    font-size: 28px;
+}
+
+/* Imagen principal */
+.container-portada {
+    width: 100%;
+    height: calc(100vh - 60px); /* Calcula la altura restando el tamaño del header */
+    background-image: url(img/fondo5.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: movimiento 10s infinite linear alternate;
+    position: relative;
+    z-index: 1; /* Asegura que la imagen esté por debajo del header */
+}
+
+@keyframes movimiento {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: top right;
+    }
+}
+
+.capa-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000, #515198);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.container-details {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.details {
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+}
+
+.details h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.details p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.details button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid #fff;
+    transition: background 300ms;
+    cursor: pointer;
+    color: #fff;
+}
+
+.details button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Barra de navegación */
+nav {
+    width: 100%;
+    background-color: #0e1011;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin-top: 0;
+    position: relative;
+    z-index: 10; /* Asegura que la navegación esté por encima de otros elementos */
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu-horizontal > li {
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.menu-horizontal > li:hover {
+    background-color: #576164;
+}
+
+.menu-vertical {
+    position: absolute;
+    top: 100%; /* Coloca el menú desplegable justo debajo del enlace principal */
+    left: 0;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20; /* Asegura que el menú desplegable esté por encima de otros elementos */
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: #000;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: #fff;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+/* Presentación */
+.Presentacion {
+    background-color: #414b49;
+    /* border: 1px solid #fff; */
+    text-align: center;
+    padding: 6%;
+    margin: auto;
+    color: #fff;
+}
+
+/* Contenido de la imagen */
+
+/* Imagen principal Portada */
+.container-img {
+    width: 100%;
+    height: calc(60vh - 40px); /* Calcula la altura restando el tamaño del header */
+    background-image: url(img/fondo4.jpeg);
+    background-size: cover;
+    background-position: center;
+    animation: movimiento 10s infinite linear alternate;
+    position: relative;
+    z-index: 1;
+}
+
+.capa-gradient2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000, #515198);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.container-detail {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+}
+
+.detalles {
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    z-index: 2;
+}
+
+.detalles h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.detalles p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* texto de abajo de la imagen */
+.text {
+    background-color: #414b49;
+    text-align: center;
+    padding: 6%;
+    margin: auto;
+    color: #fff;
+}
+
+/* Texto del centro */
+.content-card {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    color: #dfdfdf;
+    background-color: #414b49;
+    text-align: center;
+    width: 40vw;
+    padding: 20px 10px;
+    box-shadow: 0 0 30px 0 #0007;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.card_title {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #2e2e36;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-title {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .logo-title img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-title h4 {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    .icon-menu {
+        font-size: 24px;
+        right: 5px;
+        top: 10px;
+    }
+
+    .container-portada {
+        height: auto;
+    }
+
+    .details h1 {
+        font-size: 24px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .details .mini_text {
+        font-size: 12px;
+    }
+
+    .details button {
+        font-size: 14px;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-horizontal > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-horizontal > li > a {
+        padding: 15px;
+    }
+
+    .menu-vertical {
+        width: 100%;
+        left: 0;
+    }
+
+    .menu-vertical li a {
+        padding: 10px;
+    }
+
+    .content-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+
+   }
+}
